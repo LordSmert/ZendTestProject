@@ -36,6 +36,7 @@ return [
             ],
         ],
     ],
+
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
@@ -46,6 +47,7 @@ return [
         'display_exceptions'       => true,
         'doctype'                  => 'HTML5',
         'not_found_template'       => 'error/404',
+
         'exception_template'       => 'error/index',
         'template_map' => [
             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
@@ -56,5 +58,6 @@ return [
         'template_path_stack' => [
             __DIR__ . '/../view',
         ],
+        'strategies' => ['ViewJsonStrategy',],
     ],
 ];

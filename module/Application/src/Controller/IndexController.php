@@ -8,24 +8,13 @@
 namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Model\ViewModel;
+use Zend\View\Model\JsonModel;
 
 class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        return new ViewModel();
+        //return new JsonModel(['Hello'=>'test1']);
     }
-    public function aboutAction() 
-{              
-    $appName = 'HelloWorld!';
-    $appDescription = 'A sample application for the Using Zend Framework 4 book';
-    
-    // Возвращает переменные скрипту представления с помощью 
-    // переменной-контейнера ViewModel
-    return new ViewModel([
-        'appName' => $appName,
-        'appDescription' => $appDescription
-    ]);
 }
-}
+// Действие "about" 
